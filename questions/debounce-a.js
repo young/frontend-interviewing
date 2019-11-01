@@ -2,7 +2,6 @@ function debounce(fn, time) {
     let timeoutId;
 
     return function() {
-
       // Check for existing calls
       if (timeoutId) {
         clearTimeout(timeoutId)
