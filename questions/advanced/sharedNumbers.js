@@ -18,5 +18,5 @@
     function shared(iter1, iter2) {}
 
 
-    shared(i1, i2); // [2, 9, 10]
+    shared(i1(), i2()); // [2, 9, 10]
 */
