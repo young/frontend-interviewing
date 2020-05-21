@@ -10,9 +10,6 @@ function debounce(fn, time) {
       timeoutId = setTimeout(() => {
         // Invoke fn
         fn.apply(this, arguments);
-        // Clear timeout
-        timeoutId = null;
-
       }, time);
     }
 
