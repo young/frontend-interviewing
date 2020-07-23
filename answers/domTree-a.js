@@ -5,7 +5,7 @@ function backwardsPath(element, root) {
     while (current.parentNode) {
         const index = [...current.parentNode.children].indexOf(current);
         path.push(index);
-        current = parentNode;
+        current = current.parentNode;
     }
 
     current = root;
