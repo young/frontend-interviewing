@@ -8,7 +8,7 @@ function moveElement(duration, distance, element) {
         const amountToMove = progress * distance;
         element.style.transform = `translateX(${amountToMove}px)`;
 
-        if (amountToMove < distance) {
+        if (progress < 1) {
             requestAnimationFrame(move);
         }
     }
