@@ -1,4 +1,17 @@
 function promisify(fn) {
+    return function(...args) {
+        return new Promise(function (resolve, reject) {
+            function cb(result) {
+                resolve(result);
+            }
+
+            fn.apply(this, args.concat(cb));
+        });
+    }
+}
+
+/*
+function promisify(fn) {
     return function (...args) {
         return new Promise(function (resolve, reject) {
             function cb(result) {
@@ -26,4 +39,4 @@ function printNameAfterGivenTime() {
 // Promise chain
 setTimeOutPromise(2000)
     .then(printAndReturnPromise)
-    .then(printNameAfterGivenTime);
+    .then(printNameAfterGivenTime); */
