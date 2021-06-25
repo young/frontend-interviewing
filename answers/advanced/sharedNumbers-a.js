@@ -7,6 +7,7 @@ function shared(x, y) {
         if (curr1.value === curr2.value) {
             commonNumbers.push(curr1.value);
             curr1 = x.next();
+            curr2 = y.next();
             continue;
         }
 

@@ -1,5 +1,6 @@
 // Create a "shared" function that takes two array iterators
 // and returns the numbers common in both arrays.
+// Assume the array is sorted in non decreasing order and has no duplicates
 
 /*
     const i1 = function* () {
